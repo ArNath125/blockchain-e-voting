@@ -1,0 +1,45 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decentralized Voting DApp</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.0/dist/web3.min.js"></script>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Decentralized Voting System</h1>
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <p id="wallet-address"></p>
+    <p id="voter-status"></p>
+
+    <!-- Admin Section -->
+    <div id="admin-section">
+        <h2>Admin Panel</h2>
+        <div>
+            <h3>Add Candidate</h3>
+            <input type="text" id="candidate-name" placeholder="Candidate Name">
+            <input type="text" id="candidate-party" placeholder="Party Name">
+            <button onclick="addCandidate()">Add Candidate</button>
+        </div>
+        <div>
+            <h3>Add Voter</h3>
+            <input type="text" id="voter-address" placeholder="Voter Wallet Address">
+            <button onclick="addVoter()">Add Voter</button>
+        </div>
+        <button onclick="startElection()">Start Election</button>
+        <button onclick="endElection()">End Election</button>
+        <h3>Real-Time Vote Count</h3>
+        <div id="vote-count"></div>
+    </div>
+
+    <!-- Voter Section -->
+    <h2>Candidates</h2>
+    <div id="candidate-list"></div>
+
+    <h2>Winner</h2>
+    <p id="winner"></p>
+</body>
+</html>

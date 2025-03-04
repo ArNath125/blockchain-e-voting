@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0",
+    "@trufflesuite/uws-js-unofficial": "^20.30.0-unofficial.0"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}
+
